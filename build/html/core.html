@@ -82,8 +82,26 @@
              
   <section id="ksentinel-core">
 <h1>kSentinel Core<a class="headerlink" href="#ksentinel-core" title="Permalink to this heading"></a></h1>
-<p>This is the documentation for kSentinel core</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Welcome&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<p>The main kSentinel binary is primarily written in C++ and C. Follow these steps to run the binary:</p>
+<ul class="simple">
+<li><p>Open a root shell: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">su</span></code></p></li>
+<li><p>Set the environment variable <code class="docutils literal notranslate"><span class="pre">KS_CONFIG_DIR</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">KS_CONFIG_DIR</span> <span class="o">=</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">some</span><span class="o">/</span><span class="n">folder</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a config.yml file in the directory <code class="docutils literal notranslate"><span class="pre">KS_CONFIG_DIR</span></code>.</p></li>
+<li><p>Store the following values in config.yml</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KS_AUTH_API</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8080/api/auth&quot;</span>
+<span class="n">KS_KSCORE_API</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:9000/api/kscore&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Run the binary</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">kSentinel</span> <span class="o">--</span><span class="n">run</span>
 </pre></div>
 </div>
 </section>
